@@ -5,10 +5,13 @@ import codegen from '../views/codegen/index.vue'
 
 const routes = [
     { path: '/', component: home },
-
     {
         path: '/codegen',
         component: codegen
+    },
+    {
+        path: '/order',
+        component: () => import('../views/order/index.vue')
     }
   ]
 

@@ -8,10 +8,10 @@
             <el-icon>
               <location/>
             </el-icon>
-            <span>Navigator One</span>
+            <span>基础能力</span>
           </template>
-          <el-menu-item index="1-1">item one</el-menu-item>
-          <el-menu-item index="1-2">item two</el-menu-item>
+          <el-menu-item index="1-1" @click="codeGenerate">代码生产</el-menu-item>
+          <el-menu-item index="1-2" @click="orderManagement">order management</el-menu-item>
           <el-menu-item index="1-3">item three</el-menu-item>
           <el-sub-menu index="1-4">
             <template #title>item four</template>
@@ -50,10 +50,20 @@ import {
   Setting,
 } from '@element-plus/icons-vue'
 
+import router from '@/router'
+
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
 const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
+}
+
+const codeGenerate = () => {
+  router.push('/codegen')
+}
+
+const orderManagement = () => {
+  router.push('/order')
 }
 </script>
