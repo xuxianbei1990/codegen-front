@@ -12,7 +12,12 @@ const routes = [
     {
         path: '/order',
         component: () => import('../views/order/index.vue')
-    }
+    },
+    {
+        path: '/order/detail',
+        component: () => import('../views/order/detail.vue')
+
+    },
   ]
 
 const router = createRouter({

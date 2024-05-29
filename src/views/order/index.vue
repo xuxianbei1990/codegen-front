@@ -35,6 +35,14 @@
           <el-table-column prop="id" label="id" width="80"/>
           <el-table-column prop="orderNo" label="orderNo" width="380"/>
           <el-table-column prop="createTime" label="createTime"/>
+          <el-table-column fixed="right" label="Operations" width="120">
+            <template #default="scope">
+              <el-button link type="primary" size="small" @click="detailClick(scope.row)">
+                Detail
+              </el-button>
+              <el-button link type="primary" size="small">Edit</el-button>
+            </template>
+          </el-table-column>
         </el-table>
       </el-main>
     </el-container>
@@ -45,6 +53,7 @@
 
 import * as orderApi from '@/api/order'
 import {reactive, ref} from 'vue'
+import router from '@/router'
 
 const tableData = ref([]) // 列表的数据
 
@@ -59,6 +68,12 @@ const onSubmit = async () => {
   tableData.value = data.records
 }
 
+const detailClick = (row: any) => {
+  console.log(row)
+  router.push({
+    query: { id: row.id },
+    path: '/order/detail'})
+}
 
 </script>
 
