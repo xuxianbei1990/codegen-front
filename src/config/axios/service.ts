@@ -34,7 +34,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   async (response: AxiosResponse<any>) => {
     let { data } = response
-    const config = response.config
+
     if (!data) {
       // 返回“[HTTP]请求没有返回值”;
       throw new Error()

@@ -1,6 +1,6 @@
 <template>
   <el-row class="tac">
-    <el-col :span="20">
+    <el-col :span="35">
       <h5 class="mb-2">Default colors</h5>
       <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
         <el-sub-menu index="1">
@@ -8,7 +8,7 @@
             <el-icon>
               <location/>
             </el-icon>
-            <span>基础能力</span>
+            <span>basic ability</span>
           </template>
           <el-menu-item index="1-1" @click="codeGenerate">代码生产</el-menu-item>
           <el-menu-item index="1-2" @click="orderManagement">order management</el-menu-item>
