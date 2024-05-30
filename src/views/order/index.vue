@@ -69,10 +69,10 @@ const onSubmit = async () => {
 }
 
 const detailClick = (row: any) => {
-  console.log(row)
   router.push({
-    query: { id: row.id },
-    path: '/order/detail'})
+    query: {id: 51},
+    path: '/order/detail'
+  })
 }
 
 </script>
