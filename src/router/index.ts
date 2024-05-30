@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, useRoute } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import home from '../views/home/home.vue'
 import codegen from '../views/codegen/index.vue'
 
@@ -25,5 +25,4 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes: routes, // `routes: routes` 的缩写
   })
-export { useRoute }
 export default router

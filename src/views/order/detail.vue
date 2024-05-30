@@ -7,8 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import useRoute from '@/router'
-
+import { useRoute } from "vue-router";
 const router = useRoute()
 import {onMounted, ref} from "vue";
 import * as OrderDetailAPI from "@/api/order";
@@ -16,6 +15,7 @@ const productData = ref([])
 
 
 const getDetail = async () => {
+
   if (router.query !== undefined){
     const data = await OrderDetailAPI.getOrderDetail(router.query.id)
     console.info(data)
