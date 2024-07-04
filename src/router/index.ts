@@ -16,8 +16,11 @@ const routes = [
     {
         path: '/order/detail',
         component: () => import('../views/order/detail.vue')
-
     },
+    {
+        path: '/netty',
+        component: () => import('../views/netty/index.vue')
+    }
   ]
 
 const router = createRouter({

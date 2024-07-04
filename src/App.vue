@@ -26,7 +26,7 @@
           <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick" closable>
             <el-tab-pane label="User" name="codegen">codegen</el-tab-pane>
             <el-tab-pane label="order management" name="order"></el-tab-pane>
-            <el-tab-pane label="Role" name="third">Role</el-tab-pane>
+            <el-tab-pane label="websocket" name="netty">Role</el-tab-pane>
             <el-tab-pane label="Task" name="fourth">Task</el-tab-pane>
           </el-tabs>
           <router-view></router-view>
@@ -50,6 +50,8 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
   console.log(tab, event)
   if (tab.paneName == "codegen") {
     router.push("/codegen")
+  } else if (tab.paneName == "netty") {
+    router.push("/netty")
   } else {
     router.push("/")
   }
